@@ -1,0 +1,98 @@
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
+// import AccentColorPicker from './AccentColorPicker';
+
+const tabs = [
+  { label: 'Home', path: '/' },
+  { label: 'Experiences', path: '/experiences' },
+  { label: 'Projects', path: '/projects' },
+];
+
+const Navbar = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-50 border-b border-border bg-bg/95 backdrop-blur">
+      <div className="relative max-w-6xl mx-auto px-6 h-14 flex items-center justify-end">
+        <nav className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
+          {tabs.map((tab) => (
+            <NavLink
+              key={tab.path}
+              to={tab.path}
+              end={tab.path === '/'}
+              className={({ isActive }) =>
+                `px-3 py-1.5 text-xs tracking-widest uppercase border transition-colors ${
+                  isActive
+                    ? 'border-accent bg-accent/10 text-accent'
+                    : 'border-transparent text-text-secondary hover:text-text hover:border-border'
+                }`
+              }
+            >
+              {tab.label}
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-3">
+          {/* <AccentColorPicker /> */}
+          <ThemeToggle />
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden border border-border-light p-2 text-text-secondary cursor-pointer"
+          >
+            {mobileOpen ? (
+              <X size={16} />
+            ) : (
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <line x1="2" y1="4" x2="14" y2="4" />
+                <line x1="2" y1="8" x2="14" y2="8" />
+                <line x1="2" y1="12" x2="14" y2="12" />
+              </svg>
+            )}
+          </button>
+        </div>
+      </div>
+
+      {mobileOpen && (
+        <>
+          <div
+            className="fixed inset-0 bg-black/40 z-40 md:hidden"
+            onClick={() => setMobileOpen(false)}
+          />
+          <div className="absolute top-full left-0 right-0 z-50 bg-bg border-b border-border md:hidden">
+            <nav className="flex flex-col px-6 py-4 gap-1">
+              {tabs.map((tab) => (
+                <NavLink
+                  key={tab.path}
+                  to={tab.path}
+                  end={tab.path === '/'}
+                  onClick={() => setMobileOpen(false)}
+                  className={({ isActive }) =>
+                    `px-3 py-2.5 text-xs tracking-widest uppercase border transition-colors ${
+                      isActive
+                        ? 'border-accent bg-accent/10 text-accent'
+                        : 'border-transparent text-text-secondary hover:text-text hover:border-border'
+                    }`
+                  }
+                >
+                  {tab.label}
+                </NavLink>
+              ))}
+            </nav>
+          </div>
+        </>
+      )}
+    </header>
+  );
+};
+
+export default Navbar;

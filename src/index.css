@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--theme-bg);
+  --color-surface: var(--theme-surface);
+  --color-surface-alt: var(--theme-surface-alt);
+  --color-surface-hover: var(--theme-surface-hover);
+  --color-accent: var(--theme-accent);
+  --color-accent-dim: var(--theme-accent-dim);
+  --color-accent-subtle: var(--theme-accent-subtle);
+  --color-text: var(--theme-text);
+  --color-text-secondary: var(--theme-text-secondary);
+  --color-text-tertiary: var(--theme-text-tertiary);
+  --color-border: var(--theme-border);
+  --color-border-light: var(--theme-border-light);
+  --color-status-active: var(--theme-status-active);
+  --color-status-idle: var(--theme-status-idle);
+
+  --animate-marquee-left: marquee-left 30s linear infinite;
+  --animate-marquee-right: marquee-right 20s linear infinite;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+
+
+:root {
+  --theme-bg: #F8F7FC;
+  --theme-surface: #FFFFFF;
+  --theme-surface-alt: #F0EDF8;
+  --theme-surface-hover: #EAE5F5;
+
+  --theme-accent: #7C3AED;
+  --theme-accent-dim: rgba(124, 58, 237, 0.22);
+  --theme-accent-subtle: rgba(124, 58, 237, 0.08);
+
+  --theme-text: #191624;
+  --theme-text-secondary: rgba(25, 22, 36, 0.68);
+  --theme-text-tertiary: rgba(25, 22, 36, 0.42);
+
+  --theme-border: rgba(37, 99, 235, 0.2);
+  --theme-border-light: rgba(37, 99, 235, 0.1);
+
+  --theme-status-active: #22C55E;
+  --theme-status-idle: #F59E0B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --theme-bg: #11101A;
+    --theme-surface: #1B1928;
+    --theme-surface-alt: #252237;
+    --theme-surface-hover: #2D2942;
+
+    --theme-accent: #2563EB;
+    --theme-accent-dim: rgba(37, 99, 235, 0.3);
+    --theme-accent-subtle: rgba(37, 99, 235, 0.1);
+
+    --theme-text: #F8F7FF;
+    --theme-text-secondary: rgba(248, 247, 255, 0.841);
+    --theme-text-tertiary: rgba(248, 247, 255, 0.42);
+
+
+    --theme-border: rgba(37, 99, 235, 0.25);
+    --theme-border-light: rgba(37, 99, 235, 0.12);
+
+
+    --theme-status-active: #22C55E;
+    --theme-status-idle: #F59E0B;
+  }
+}
+
+:root.dark {
+  --theme-bg: #11101A;
+  --theme-surface: #1B1928;
+  --theme-surface-alt: #252237;
+  --theme-surface-hover: #2D2942;
+
+  --theme-accent: #A78BFA;
+  --theme-accent-dim: rgba(167, 139, 250, 0.30);
+  --theme-accent-subtle: rgba(167, 139, 250, 0.12);
+
+  --theme-text: #F8F7FF;
+  --theme-text-secondary: rgba(248, 247, 255, 0.841);
+  --theme-text-tertiary: rgba(248, 247, 255, 0.42);
+
+  --theme-border: rgba(167, 139, 250, 0.28);
+  --theme-border-light: rgba(167, 139, 250, 0.14);
+
+  --theme-status-active: #22C55E;
+  --theme-status-idle: #F59E0B;
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-dim);
+    color: var(--color-text);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-accent-dim);
+  }
+
+  .loader {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    clip-path: inset(0 100% 0 0);
+    animation: loading 2s steps(11) infinite;
+  }
+}
+
+/* Dark mode prose overrides */
+.dark .prose.prose-custom,
+:root:not(.light) .prose.prose-custom {
+  --tw-prose-body: rgba(255, 255, 255, 0.87);
+  --tw-prose-headings: #ffffff;
+  --tw-prose-links: var(--theme-accent);
+  --tw-prose-bold: #ffffff;
+  --tw-prose-counters: rgba(255, 255, 255, 0.55);
+  --tw-prose-bullets: rgba(255, 255, 255, 0.55);
+  --tw-prose-hr: var(--theme-border);
+  --tw-prose-quotes: rgba(255, 255, 255, 0.87);
+  --tw-prose-quote-borders: var(--theme-accent);
+  --tw-prose-captions: rgba(255, 255, 255, 0.45);
+  --tw-prose-code: var(--theme-accent);
+  --tw-prose-code-bg: var(--theme-accent-subtle);
+  --tw-prose-pre-code: rgba(255, 255, 255, 0.85);
+  --tw-prose-pre-bg: #252237;
+  --tw-prose-th-borders: var(--theme-border);
+  --tw-prose-td-borders: var(--theme-border-light);
+}
+
+.dark .prose-custom,
+:root:not(.light) .prose-custom {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.dark .prose-custom h1,
+.dark .prose-custom h2,
+.dark .prose-custom h3,
+.dark .prose-custom h4,
+:root:not(.light) .prose-custom h1,
+:root:not(.light) .prose-custom h2,
+:root:not(.light) .prose-custom h3,
+:root:not(.light) .prose-custom h4 {
+  color: #ffffff;
+}
+
+.dark .prose-custom strong,
+:root:not(.light) .prose-custom strong {
+  color: #ffffff;
+}
+
+.dark .prose-custom code,
+:root:not(.light) .prose-custom code {
+  color: var(--theme-accent);
+}
+
+.dark .prose-custom a,
+:root:not(.light) .prose-custom a {
+  color: var(--theme-accent);
+}
+
+/* Smooth transitions for theme & accent changes */
+* {
+  transition: background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+@keyframes boot-logo {
+  0% {
+    transform: scale(0) rotate(-90deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.2) rotate(5deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-boot-logo {
+  animation: boot-logo 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
