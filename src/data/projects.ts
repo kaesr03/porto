@@ -26,11 +26,12 @@ function svgThumbnail(index: number, title: string, pattern: string): string {
 
 export const projects: Project[] = [
   {
-    title: 'website',
-    description: 'My personal website built with Next.js and Tailwind CSS.',
+    title: 'Inventory Management',
+    description:
+      'A web application I built to help motorcycle workshops manage inventory, sales, and expenses.',
     stack: ['TypeScript', 'Next.js', 'React', 'Tailwind CSS'],
-    thumbnail: svgThumbnail(0, 'website', 'W'),
-    liveUrl: 'https://maulananizhar.my.id',
+    thumbnail: svgThumbnail(0, 'Inventory Management', 'I'),
+    liveUrl: 'https://dasajayamotor.vercel.app/',
     githubUrl: 'https://github.com/maulananizhar/website',
   },
   {
@@ -48,65 +49,5 @@ export const projects: Project[] = [
     stack: ['TypeScript', 'Next.js', 'React', 'MongoDB'],
     thumbnail: svgThumbnail(2, 'spk-ahp', 'SA'),
     githubUrl: 'https://github.com/maulananizhar/spk-ahp-kelompok-9',
-  },
-  {
-    title: 'empu-store',
-    description: 'Cashier system to help record and manage store transactions.',
-    stack: ['TypeScript', 'Next.js', 'React', 'MySQL'],
-    thumbnail: svgThumbnail(3, 'empu-store', 'ES'),
-    githubUrl: 'https://github.com/maulananizhar/empu-store',
-  },
-  {
-    title: 'epl-machine-learning',
-    description:
-      'Machine learning project for English Premier League analysis.',
-    stack: ['Jupyter Notebook', 'Python'],
-    thumbnail: svgThumbnail(4, 'epl-ml', 'ML'),
-    githubUrl: 'https://github.com/maulananizhar/epl-machine-learning',
-  },
-  {
-    title: 'edom-filler',
-    description: 'Automatic fill your State University of Jakarta EDOM.',
-    stack: ['JavaScript'],
-    thumbnail: svgThumbnail(5, 'edom-filler', 'EF'),
-    githubUrl: 'https://github.com/maulananizhar/edom-filler',
-  },
-  {
-    title: 'next-omdb-app',
-    description: 'Movie search application built with Next.js and OMDB API.',
-    stack: ['JavaScript', 'Next.js', 'React'],
-    thumbnail: svgThumbnail(6, 'next-omdb', 'NO'),
-    liveUrl: 'https://deploy-next-omdb-app.vercel.app',
-    githubUrl: 'https://github.com/maulananizhar/next-omdb-app',
-  },
-  {
-    title: 'effortless-survival',
-    description: 'Mod for mindustry with effortless survival mechanics.',
-    stack: ['JavaScript'],
-    thumbnail: svgThumbnail(7, 'effortless', 'ES'),
-    githubUrl: 'https://github.com/maulananizhar/effortless-survival',
-  },
-  {
-    title: 'java-aplikasi-kasir',
-    description: 'Cashier application built with Java.',
-    stack: ['Java'],
-    thumbnail: svgThumbnail(8, 'java-kasir', 'JK'),
-    githubUrl: 'https://github.com/maulananizhar/java-aplikasi-kasir',
-  },
-  {
-    title: 'color-guess',
-    description: 'A game to test CSS styling skills by guessing the hex color.',
-    stack: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: svgThumbnail(9, 'color-guess', 'CG'),
-    liveUrl: 'https://maulananizhar.github.io/color-guess',
-    githubUrl: 'https://github.com/maulananizhar/color-guess',
-  },
-  {
-    title: 'game-suit',
-    description: 'Traditional Indonesian rock-paper-scissors game (Suit).',
-    stack: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: svgThumbnail(10, 'game-suit', 'GS'),
-    liveUrl: 'https://maulananizhar.github.io/game-suit',
-    githubUrl: 'https://github.com/maulananizhar/game-suit',
   },
 ];

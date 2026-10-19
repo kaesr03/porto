@@ -1,5 +1,6 @@
-import { ArrowUpRight, Mail, Download } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { ArrowUpRight, Mail, Download } from 'lucide-react';
+import { siGithub } from 'simple-icons';
 import Button from '../../ui/Button';
 // import StatusDot from '../ui/StatusDot';
 import { profile } from '../../data/profile';
@@ -45,6 +46,17 @@ export default function Hero() {
             >
               <Mail size={14} />
               <span>Contact</span>
+            </Button>
+            <Button variant="outline" href="https://github.com/kaesr03">
+              <svg
+                viewBox="0 0 24 24"
+                width="39"
+                height="24"
+                className="size-6 fill-current text-black dark:text-white"
+              >
+                <path d={siGithub.path} />
+              </svg>
+              <span>Github</span>
             </Button>
             <Button
               variant="outline"
