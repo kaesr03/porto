@@ -60,7 +60,7 @@ export default function Hero() {
             </Button>
             <Button
               variant="outline"
-              href="https://drive.google.com/uc?export=download&id=1xPg8kuwNSfiDRXWexc-5PfAAWqHfy9Pn"
+              href="https://drive.google.com/uc?export=download&id=1bJO-TQLSn_Xqd4QXoKypk6BbHsntOHGh"
             >
               <Download size={14} />
               <span>Download CV</span>

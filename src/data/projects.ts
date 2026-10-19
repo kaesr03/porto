@@ -29,10 +29,10 @@ export const projects: Project[] = [
     title: 'Inventory Management',
     description:
       'A web application I built to help motorcycle workshops manage inventory, sales, and expenses.',
-    stack: ['TypeScript', 'Next.js', 'React', 'Tailwind CSS'],
+    stack: ['Javascript', 'React.js', 'Express.js', 'Tailwind CSS'],
     thumbnail: svgThumbnail(0, 'Inventory Management', 'I'),
     liveUrl: 'https://dasajayamotor.vercel.app/',
-    githubUrl: 'https://github.com/maulananizhar/website',
+    githubUrl: 'https://github.com/kaesr03/persediaan-fe',
   },
   // {
   //   title: 'dev-danaku',

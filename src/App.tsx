@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import AppLayout from './ui/AppLayout';
 import Experiences from './features/experience/Experiences';
+import Projects from './features/project/Projects';
 
 // import Home from './features/home/Home';
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/experiences',
         element: <Experiences />,
+      },
+      {
+        path: '/projects',
+        element: <Projects />,
       },
     ],
   },

@@ -4,11 +4,9 @@ export const profile: ProfileData = {
   name: 'Kaesar Albert Bancin',
   role: 'Software Engineer',
   location: 'Bekasi, Jawa Barat, Indonesia',
-  email: 'maulananizhar27@gmail.com',
+  email: 'kaesaralbertbancin01@gmail.com',
   github: 'https://github.com/maulananizhar',
   linkedin: 'https://www.linkedin.com/in/maulananizhar/',
-  twitter: '',
-  instagram: 'https://www.instagram.com/maulananizhar_/',
   shortBio:
     'Recent Informatics graduate from Universitas Gunadarma and aspiring Full-Stack Developer with a strong foundation in React.js and Node.js/Express.js. Developed technical skills through Dicoding intensive 6 month Asah cohort. Built web applications, including an AI-driven Predictive Maintenance Copilot and a real time Inventory Management System for the automotive sector. Skilled in developing RESTful APIs, managing databases, and maintaining clean, maintainable code using Git and GitHub.',
   longBio:
