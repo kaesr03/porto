@@ -7,7 +7,7 @@ import RecentProjects from './RecentProjects';
 
 const Home = () => {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-8 space-y-15">
+    <div className="max-w-6xl mx-auto px-6 py-8 space-y-10">
       <Hero />
       <SkillSection />
       <Divider />

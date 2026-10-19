@@ -2,7 +2,7 @@ import type { ProfileData } from '../types';
 
 export const profile: ProfileData = {
   name: 'Kaesar Albert Bancin',
-  role: 'Software Engineer',
+  role: 'Web Developer',
   location: 'Bekasi, Jawa Barat, Indonesia',
   email: 'kaesaralbertbancin01@gmail.com',
   github: 'https://github.com/maulananizhar',
