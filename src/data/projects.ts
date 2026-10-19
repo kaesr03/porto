@@ -34,20 +34,20 @@ export const projects: Project[] = [
     liveUrl: 'https://dasajayamotor.vercel.app/',
     githubUrl: 'https://github.com/maulananizhar/website',
   },
-  {
-    title: 'dev-danaku',
-    description: 'Village Economic Management Application built with Next.js.',
-    stack: ['TypeScript', 'Next.js', 'React', 'PostgreSQL'],
-    thumbnail: svgThumbnail(1, 'dev-danaku', 'D'),
-    liveUrl: 'https://danaku-production.vercel.app',
-    githubUrl: 'https://github.com/maulananizhar/dev-danaku',
-  },
-  {
-    title: 'spk-ahp-kelompok-9',
-    description:
-      'Best laptop selection system using the Analytical Hierarchy Process (AHP) method built with Next.js.',
-    stack: ['TypeScript', 'Next.js', 'React', 'MongoDB'],
-    thumbnail: svgThumbnail(2, 'spk-ahp', 'SA'),
-    githubUrl: 'https://github.com/maulananizhar/spk-ahp-kelompok-9',
-  },
+  // {
+  //   title: 'dev-danaku',
+  //   description: 'Village Economic Management Application built with Next.js.',
+  //   stack: ['TypeScript', 'Next.js', 'React', 'PostgreSQL'],
+  //   thumbnail: svgThumbnail(1, 'dev-danaku', 'D'),
+  //   liveUrl: 'https://danaku-production.vercel.app',
+  //   githubUrl: 'https://github.com/maulananizhar/dev-danaku',
+  // },
+  // {
+  //   title: 'spk-ahp-kelompok-9',
+  //   description:
+  //     'Best laptop selection system using the Analytical Hierarchy Process (AHP) method built with Next.js.',
+  //   stack: ['TypeScript', 'Next.js', 'React', 'MongoDB'],
+  //   thumbnail: svgThumbnail(2, 'spk-ahp', 'SA'),
+  //   githubUrl: 'https://github.com/maulananizhar/spk-ahp-kelompok-9',
+  // },
 ];
