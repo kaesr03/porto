@@ -1,10 +1,10 @@
-import { useNavigate } from "react-router-dom";
-import { ArrowUpRight, Mail, Download } from "lucide-react";
-import { siGithub } from "simple-icons";
-import Button from "../../ui/Button";
-import { cn } from "../../lib/utils";
+import { useNavigate } from 'react-router-dom';
+import { ArrowUpRight, Mail, Download } from 'lucide-react';
+import { siGithub } from 'simple-icons';
+import Button from '../../ui/Button';
+import { cn } from '../../lib/utils';
 // import StatusDot from '../ui/StatusDot';
-import { profile } from "../../data/profile";
+import { profile } from '../../data/profile';
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ export default function Hero() {
             <Button
               variant="primary"
               className="justify-center px-2 py-2 text-xs sm:px-4 sm:text-sm"
-              onClick={() => navigate("/projects")}
+              onClick={() => navigate('/projects')}
             >
               <span>View Projects</span>
               <ArrowUpRight size={14} />
@@ -44,7 +44,7 @@ export default function Hero() {
             <Button
               variant="outline"
               className="justify-center px-2 py-2 text-xs sm:px-4 sm:text-sm"
-              href="https://github.com/kaesr03"
+              href={profile.github}
             >
               <svg
                 viewBox="0 0 24 24"
@@ -58,12 +58,12 @@ export default function Hero() {
             <Button
               variant="outline"
               className="justify-center px-2 py-2 text-xs sm:px-4 sm:text-sm"
-              href="https://www.linkedin.com/in/kaesar-albert-18943337b"
+              href={profile.linkedin}
             >
               <img
                 src="/images/linkedin.png"
                 alt="linkedin logo"
-                className={cn("block", "h-4 w-4")}
+                className={cn('block', 'h-4 w-4')}
               />
               <span>Linkedin</span>
             </Button>
