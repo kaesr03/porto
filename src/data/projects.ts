@@ -56,7 +56,7 @@ export const projects: Project[] = [
     description:
       'A web application I built to help bread shop manage inventory.',
     stack: ['CSS', 'PHP', 'HTML', 'MYsql', 'Laravel'],
-    thumbnail: svgThumbnail(2, 'spk-ahp', 'SA'),
+    thumbnail: svgThumbnail(2, 'Bread', 'B'),
     githubUrl: 'https://github.com/kaesr03/rotiLaravel.git',
   },
 ];
