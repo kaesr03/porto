@@ -1,8 +1,8 @@
-import { useState } from "react";
-import SkillRow from "../../ui/helpers/SkillRow";
-import TechIcon from "../../ui/helpers/TechIcon";
-import { skillRows } from "../../data/tech";
-import { LayoutGrid, List } from "lucide-react";
+import { useState } from 'react';
+import SkillRow from '../../ui/helpers/SkillRow';
+import TechIcon from '../../ui/helpers/TechIcon';
+import { skillRows } from '../../data/tech';
+import { LayoutGrid, List } from 'lucide-react';
 
 const SkillSection = () => {
   const [isInline, setIsInline] = useState(false);
@@ -18,7 +18,7 @@ const SkillSection = () => {
         <button
           onClick={() => setIsInline(!isInline)}
           className="border-border/70 bg-card text-muted-foreground hover:bg-accent hover:text-foreground flex h-8 w-8 items-center justify-center rounded-md border border-dashed transition-colors"
-          title={isInline ? "Show animated rows" : "Show inline"}
+          title={isInline ? 'Show animated rows' : 'Show inline'}
           aria-label="Toggle inline view"
         >
           {isInline ? <List size={16} /> : <LayoutGrid size={16} />}

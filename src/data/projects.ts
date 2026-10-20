@@ -29,25 +29,34 @@ export const projects: Project[] = [
     title: 'Inventory Management',
     description:
       'A web application I built to help motorcycle workshops manage inventory, sales, and expenses.',
-    stack: ['Javascript', 'React.js', 'Express.js', 'Tailwind CSS'],
+    stack: ['Javascript', 'React.js', 'Express.js', 'Tailwind CSS', 'Vite'],
     thumbnail: svgThumbnail(0, 'Inventory Management', 'I'),
     liveUrl: 'https://dasajayamotor.vercel.app/',
     githubUrl: 'https://github.com/kaesr03/persediaan-fe',
   },
-  // {
-  //   title: 'dev-danaku',
-  //   description: 'Village Economic Management Application built with Next.js.',
-  //   stack: ['TypeScript', 'Next.js', 'React', 'PostgreSQL'],
-  //   thumbnail: svgThumbnail(1, 'dev-danaku', 'D'),
-  //   liveUrl: 'https://danaku-production.vercel.app',
-  //   githubUrl: 'https://github.com/maulananizhar/dev-danaku',
-  // },
-  // {
-  //   title: 'spk-ahp-kelompok-9',
-  //   description:
-  //     'Best laptop selection system using the Analytical Hierarchy Process (AHP) method built with Next.js.',
-  //   stack: ['TypeScript', 'Next.js', 'React', 'MongoDB'],
-  //   thumbnail: svgThumbnail(2, 'spk-ahp', 'SA'),
-  //   githubUrl: 'https://github.com/maulananizhar/spk-ahp-kelompok-9',
-  // },
+  {
+    title: 'Predictive Maintenance Copilot',
+    description:
+      'A web application built with my capstone team during the ASAH Dicoding program, designed to predict industrial machine maintenance using Agentic AI.',
+    stack: [
+      'Javascript',
+      'React.js',
+      'React',
+      'PostgreSQL',
+      'python',
+      'pandas',
+      'numpy',
+    ],
+    thumbnail: svgThumbnail(1, 'Predictive Maintenance Copilot', 'P'),
+    liveUrl: 'https://capstone-asah2025-fe.vercel.app/',
+    githubUrl: 'https://github.com/fatimaah0123/CapstoneAsah_Aura.git',
+  },
+  {
+    title: 'BetzBread',
+    description:
+      'A web application I built to help bread shop manage inventory.',
+    stack: ['CSS', 'PHP', 'HTML', 'MYsql', 'Laravel'],
+    thumbnail: svgThumbnail(2, 'spk-ahp', 'SA'),
+    githubUrl: 'https://github.com/kaesr03/rotiLaravel.git',
+  },
 ];
